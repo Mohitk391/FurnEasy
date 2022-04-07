@@ -1,5 +1,6 @@
-import {NavBar} from "../../components/index";
+import {NavBar} from "../../components/NavBar/NavBar";
 import "./authentication.css";
+import { Link } from "react-router-dom";
 
 export default function SignUp(){
     return (
@@ -22,7 +23,7 @@ export default function SignUp(){
                         </div>
                     </div>
                     <button class="btn btn-hover auth-button sign-in">Signup</button>
-                    <a href="/login.html"><button class="btn btn-hover auth-button sign-in">Existing User? Sign In</button></a>
+                    <Link to="/login"><button class="btn btn-hover auth-button sign-in">Existing User? Sign In</button></Link>
                 </div>
         </main>
     </div>
