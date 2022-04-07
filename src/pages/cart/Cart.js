@@ -1,7 +1,8 @@
 import { NavBar } from "../../components/NavBar/NavBar";
 import "./cart.css";
+import sofa from "../../Assets/images/sofa.jpeg";
 
-export default function Cart(){
+function Cart(){
     return (
         <div className="page-layout">
             <NavBar />
@@ -64,3 +65,5 @@ export default function Cart(){
         </div>
     );
 }
+
+export { Cart}
