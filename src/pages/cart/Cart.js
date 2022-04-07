@@ -1,17 +1,22 @@
 import { NavBar } from "../../components/NavBar/NavBar";
 import "./cart.css";
 import sofa from "../../Assets/images/sofa.jpeg";
+import { useCart } from "../../contexts/CartContext";
+import { Link } from "react-router-dom";
 
 function Cart(){
+    const {cartState} = useCart();
+    const productList = cartState.cartList;
     return (
         <div className="page-layout">
             <NavBar />
             <div className="main">
                 <h2 className="cart-title">My Cart</h2>
                 <div className="cart-body">
-                    <div className="card">
+                    {productList.map((product)=>{
+                        return (<div className="card">
                         <div className="image">
-                            <img src={sofa} alt="card-image" />
+                            <img src={sofa} alt="card" />
                         </div>
                         <div className="card-content">
                             <div className="card-title">Sofa</div>
@@ -19,12 +24,13 @@ function Cart(){
                             <div className="card-quantity">Quantity: <i className="fa fa-minus-circle" aria-hidden="true"></i>1<i className="fa fa-plus-circle" aria-hidden="true"></i> </div>
                             <div className="footer flex flex-center">
                                     <div className="product-card-button">
-                                        <button className="card-button-cart">Go To Cart</button>
+                                    <Link to="/cart"><button className="card-button-cart">Go To Cart</button></Link>
                                         <button className="card-button-wishlist">Remove From Wishlist</button>
                                     </div>
                             </div>
                         </div>
-                    </div>
+                    </div>)
+                    })}
                     <div className="cart-price-details">
                         <div className="card">
                             <div className="card-content">
