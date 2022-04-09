@@ -18,7 +18,7 @@ function VerticalCard(props){
                 <div className="card-footer">
                     <div className="card-footer-buttons flex flex-space-evenly">
                         <button onClick={()=>{
-                            cartDispatch({type: "ADD_TO_CART", paylaod: product})
+                            cartDispatch({type: "ADD_TO_CART", payload: props.product})
                         }} className="btn btn-hover cart-button">Add to Cart</button>
                         <button className="btn btn-hover wishlist-button">Add to Wishlist</button>
                     </div>

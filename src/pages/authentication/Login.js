@@ -6,7 +6,7 @@ export default function Login() {
     return (
         <div class="page-layout">
         <NavBar />
-        <main class="main flex flex-center">
+        <main class="authenticate-main flex flex-center">
             <div class="login-body">
                 <div class="title">Login</div>
                 <div class="input-field">
