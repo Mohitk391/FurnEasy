@@ -1,7 +1,10 @@
 import "./NavBar.css";
 import {Link} from "react-router-dom";
+import { useCart } from "../../contexts/CartContext";
 
 function NavBar() {
+    const {cartState} = useCart();
+    const {items} = cartState;
     return (
         <nav className="nav-bar">
             <Link className="logo" to="/"><div className="nav-bar-logo">FURN-EASY</div></Link>
@@ -11,8 +14,8 @@ function NavBar() {
             </div>
             <div className="nav-bar-buttons">
                 <Link to="/login"><button className="login">Login</button></Link>
-                <Link to="/wishlist" className="nav-bar-icon"><i className="fa fa-heart-o" aria-hidden="true"></i></Link>
-                <Link to="/cart" className="nav-bar-icon"><i className="fa fa-cart-plus" aria-hidden="true"></i></Link>
+                <Link to="/wishlist" className="nav-bar-icon badge-container"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="shopping-badge">0</span></Link>
+                <Link to="/cart" className="nav-bar-icon badge-container"><i class="fa fa-cart-plus" aria-hidden="true"></i><span class="shopping-badge">{items}</span></Link>
                 <Link to="/" className="nav-bar-icon"><i className="fa fa-user" aria-hidden="true"></i></Link>
             </div>
         </nav>
