@@ -2,13 +2,15 @@ import { NavBar } from "../../components/NavBar/NavBar";
 import "./products.css";
 import { VerticalCard } from "../../components/VerticalCard/VerticalCard";
 import {Filter} from "../../components/Filters/Filter";
-import {data} from "../../data/data";
 import { useFilter } from "../../contexts/FilterContext";
 import { filterProductsByRating, showCategoricalProducts, sortProductList } from "../../reducers/FilterOperations/FilterOperations";
+import { useProduct } from "../../contexts/ProductContext";
 
 function ProductListing() {
     const {filterState} = useFilter();
-    var sortedProducts = sortProductList(filterState.sortOrder, data);
+    const {products} = useProduct();
+    console.log(products);
+    var sortedProducts = sortProductList(filterState.sortOrder, products);
     var categoricalProducts = showCategoricalProducts(filterState.categories, sortedProducts);
     var ratedProducts = filterProductsByRating(filterState.ratingOrder, categoricalProducts);
     
