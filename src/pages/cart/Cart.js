@@ -1,6 +1,5 @@
 import { NavBar } from "../../components/NavBar/NavBar";
 import "./cart.css";
-import sofa from "../../Assets/images/sofa.jpeg";
 import { useCart } from "../../contexts/CartContext";
 import { useEffect, useState } from "react";
 import { useWishlist } from "../../contexts/WishlistContext";
