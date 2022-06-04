@@ -1,12 +1,15 @@
 import {NavBar} from "../../components/NavBar/NavBar";
 import "./authentication.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {useState } from "react";
 import axios from "axios";
+import { useUser } from "../../contexts/UserContext";
 
 export default function SignUp(){
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [user, setUser] = useState({firstName:"",lastName: "", email: "", password: ""});
+    const navigate = useNavigate();
+    const {userDispatch} =  useUser();
 
     const signUser = async() => {
         try {
@@ -18,6 +21,8 @@ export default function SignUp(){
             });
             const token = response.data.encodedToken;
             localStorage.setItem("token", token);
+            userDispatch({type: "SET_USER", value: response.data.foundUser});
+            navigate("/");
         }
         catch(error){
             console.error(error);
