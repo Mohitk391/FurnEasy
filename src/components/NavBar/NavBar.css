@@ -58,3 +58,15 @@
 .nav-bar-icon {
     color: var(--black);
 }
+
+.icon-badge{
+    font-size: 1rem;
+    position: absolute;
+    top: -0.8rem;
+    right: -0.8rem;
+    border-radius: 50%;
+    min-width: 1.5rem;
+    background-color: var(--bg-badge);
+    color: var(--white);
+    text-align: center;
+}
