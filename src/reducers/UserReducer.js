@@ -4,7 +4,6 @@ const UserReducer = (userState, action) => {
         case "SET_USER":
             return {...userState, user: action.value, isUserLoggedIn: true};
         case "UNSET_USER":
-            localStorage.removeItem('token');
             return {...userState, user: null, isUserLoggedIn: false};
         default: 
             return userState;

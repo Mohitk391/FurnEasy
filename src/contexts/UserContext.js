@@ -5,7 +5,7 @@ const UserContext = createContext();
 
 const initialState = {
     user : null,
-    isUserLoggedIn : false
+    isUserLoggedIn : localStorage.getItem("token") ? true : false
 }
 
 const UserProvider = ({children}) => {
