@@ -6,7 +6,7 @@ export default function Login() {
     return (
         <div class="page-layout">
         <NavBar />
-        <main class="main flex flex-center">
+        <main class="authenticate-main flex flex-center">
             <div class="login-body">
                 <div class="title">Login</div>
                 <div class="input-field">
@@ -21,7 +21,7 @@ export default function Login() {
                     <div>
                         <input type="checkbox" id="remember"/> <label for="remember">Remember me</label>
                     </div>
-                    <a  href="#" class="forgot-pwd">Forgot Password?</a>
+                    <a  href="/#" class="forgot-pwd">Forgot Password?</a>
                 </div>
                 <button class="btn btn-hover auth-button sign-in">Login</button>
                 <Link to="/signup"><button class="btn btn-hover auth-button remove-from-wishlist-button">New User? Sign Up</button></Link>

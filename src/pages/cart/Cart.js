@@ -6,12 +6,12 @@ function Cart(){
     return (
         <div className="page-layout">
             <NavBar />
-            <div className="main">
+            <div className="cart-main">
                 <h2 className="cart-title">My Cart</h2>
                 <div className="cart-body">
                     <div className="card">
                         <div className="image">
-                            <img src={sofa} alt="card-image" />
+                            <img src={sofa} alt="sofa" />
                         </div>
                         <div className="card-content">
                             <div className="card-title">Sofa</div>
