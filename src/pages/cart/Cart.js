@@ -1,5 +1,6 @@
 import { NavBar } from "../../components/NavBar/NavBar";
 import "./cart.css";
+import {sofa} from "../../Assets/images/sofa.jpeg";
 
 export default function Cart(){
     return (
@@ -10,7 +11,7 @@ export default function Cart(){
                 <div className="cart-body">
                     <div className="card">
                         <div className="image">
-                            <img src={sofa} alt="card-image" />
+                            <img src={sofa} alt="card" />
                         </div>
                         <div className="card-content">
                             <div className="card-title">Sofa</div>
