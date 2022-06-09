@@ -6,7 +6,7 @@ export default function SignUp(){
     return (
         <div class="page-layout">
         <NavBar />
-        <main class="main flex flex-center">
+        <main class="authenticate-main flex flex-center">
                 <div class="login-body">
                     <div class="title">Signup</div>
                     <div class="input-field">

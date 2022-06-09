@@ -7,7 +7,7 @@ function ProductListing() {
     return (
         <div className="page-layout">
         <NavBar />
-        <main className="main">
+        <main className="products-main">
             <aside className="filter flex flex-column">
                 <div className="filter-title-section flex flex-space-between">
                     <div className="title section-title">Filters</div>
