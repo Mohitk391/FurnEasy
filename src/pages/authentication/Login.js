@@ -4,12 +4,16 @@ import { Link, useNavigate } from "react-router-dom";
 import {useState } from "react";
 import Axios from "axios";
 import { useUser } from "../../contexts/UserContext";
+import { useCart } from "../../contexts/CartContext";
+import { useWishlist } from "../../contexts/WishlistContext";
 
 export default function Login() {
     const [isPasswordVisible, setIsPasswordVisible] = useState(false);
     const [user, setUser] = useState({ email: "", password: ""});
     const navigate = useNavigate();
     const {userDispatch} = useUser();
+    const {cartDispatch} = useCart();
+    const {wishlistDispatch} = useWishlist();
 
     const loginUser  = async () => {
         try {
@@ -20,6 +24,8 @@ export default function Login() {
             const token = response.data.encodedToken;
             localStorage.setItem("token", token);
             userDispatch({type: "SET_USER", value: response.data.foundUser});
+            cartDispatch({type: "SET_CART", payload: response.data.foundUser.cart});
+            wishlistDispatch({type:"SET_WISHLIST", payload: response.data.foundUser.wishlist});
             navigate("/");
         }
         catch(error){
