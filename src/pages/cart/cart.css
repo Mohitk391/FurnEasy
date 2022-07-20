@@ -12,8 +12,8 @@
     height: max-content;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    width: 50vw
+    gap: 1rem;
+    width: 50vw;
 }
 
 .quantity{

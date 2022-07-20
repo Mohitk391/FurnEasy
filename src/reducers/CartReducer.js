@@ -1,3 +1,5 @@
+import { isItemInBucket } from "./isItemInBucket";
+
 const cartReducer = (cartState, action) => {
     switch (action.type) {
         case "ADD_TO_CART":
@@ -9,20 +11,9 @@ const cartReducer = (cartState, action) => {
     }
 };
 
-function itemExistsInCart(cart, product) {  
-    var flag = false;
-    flag = cart.some(current => {
-        if(current.name === product.name){
-            return true;
-        }
-    })
-    return flag;
-}
-
-
 function addToCart(product, cartList) {
     var updatedCart = [];
-    if (itemExistsInCart(cartList, product)) {
+    if (isItemInBucket(cartList, product)) {
     updatedCart = cartList.map((currentItem) => {
         if (currentItem.name === product.name) {
             return { ...currentItem, count: currentItem.count + 1 };
@@ -55,4 +46,4 @@ function removeFromCart(product, cartList){
     return updatedCart;
 }
 
-export {cartReducer, itemExistsInCart}
+export {cartReducer}
