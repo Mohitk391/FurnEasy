@@ -7,17 +7,24 @@ import { BrowserRouter } from 'react-router-dom';
 import { CartProvider } from './contexts/CartContext';
 import { WishlistProvider } from './contexts/WishlistContext';
 import { FilterProvider } from './contexts/FilterContext';
+import { makeServer } from "./server";
+import { ProductProvider } from './contexts/ProductContext';
+
+// Call make Server
+makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <FilterProvider>
-        <WishlistProvider>
-          <CartProvider>
-            <App />
-          </CartProvider>
-        </WishlistProvider>
-      </FilterProvider>
+      <ProductProvider>
+        <FilterProvider>
+          <WishlistProvider>
+            <CartProvider>
+              <App />
+            </CartProvider>
+          </WishlistProvider>
+        </FilterProvider>
+      </ProductProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')

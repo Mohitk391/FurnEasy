@@ -4,6 +4,7 @@ export const isItemInBucket = (bucket, product) => {
         if (current.name === product.name) {
             return true;
         }
+        return false;
     });
     return flag;
 };
