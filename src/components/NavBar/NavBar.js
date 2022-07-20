@@ -17,8 +17,8 @@ function NavBar() {
             </div>
             <div className="nav-bar-buttons">
                 <Link to="/login"><button className="btn btn-hover sign-in">Login</button></Link>
-                <Link to="/wishlist" className="nav-bar-icon badge-container"><i class="fa fa-heart-o" aria-hidden="true"></i><span class="shopping-badge">{wishlistState.itemsInWishlist}</span></Link>
-                <Link to="/cart" className="nav-bar-icon badge-container"><i class="fa fa-cart-plus" aria-hidden="true"></i><span class="shopping-badge">{items}</span></Link>
+                <Link to="/wishlist" className="nav-bar-icon badge-container"><i className="fa fa-heart-o" aria-hidden="true"></i><span className="shopping-badge">{wishlistState.itemsInWishlist}</span></Link>
+                <Link to="/cart" className="nav-bar-icon badge-container"><i className="fa fa-cart-plus" aria-hidden="true"></i><span className="shopping-badge">{items}</span></Link>
                 <Link to="/" className="nav-bar-icon"><i className="fa fa-user" aria-hidden="true"></i></Link>
             </div>
         </nav>
