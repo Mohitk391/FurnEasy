@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 import {Link} from "react-router-dom";
 import { useCart } from "../../contexts/CartContext";
@@ -7,7 +8,7 @@ function NavBar() {
     const {items} = cartState;
     return (
         <nav className="nav-bar">
-            <Link className="logo" to="/"><div className="nav-bar-logo">FURN-EASY</div></Link>
+            <div className="nav-bar-logo"><Link className="logo" to="/">FURN-EASY</Link></div>
             <div className="navbar-search">
                 <input className="navbar-searchbar" type="text" placeholder="Search for a product..."/>
                 <Link to="/" ><i className="fa-solid fa-magnifying-glass"></i></Link>

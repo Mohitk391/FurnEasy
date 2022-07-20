@@ -2,7 +2,7 @@
 .main {
     display: grid;
     grid-template-areas:
-        "main-products"
+        "featured-products"
         "main-large-info";
 }
 
