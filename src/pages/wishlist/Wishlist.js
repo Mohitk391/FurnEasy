@@ -7,7 +7,7 @@ function Wishlist() {
     return (
         <div class="page-layout">
         <NavBar />
-        <main class="wishlistmain">
+        <main class="wishlist-main">
             <h2 class="wishlist-title">My Wishlist</h2>
             <div class="main-body">
                 <div class="card vertical-card">

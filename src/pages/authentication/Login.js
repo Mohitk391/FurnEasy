@@ -21,7 +21,7 @@ export default function Login() {
                     <div>
                         <input type="checkbox" id="remember"/> <label for="remember">Remember me</label>
                     </div>
-                    <a  href="/#" class="forgot-pwd">Forgot Password?</a>
+                    <Link  to="/login" class="forgot-pwd">Forgot Password?</Link>
                 </div>
                 <button class="btn btn-hover auth-button sign-in">Login</button>
                 <Link to="/signup"><button class="btn btn-hover auth-button remove-from-wishlist-button">New User? Sign Up</button></Link>

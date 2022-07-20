@@ -7,7 +7,7 @@ function NavBar() {
             <div className="nav-bar-logo"><Link className="logo" to="/">FURN-EASY</Link></div>
             <div className="navbar-search">
                 <input className="navbar-searchbar" type="text" placeholder="Search for a product..."/>
-                <a href="/#" ><i className="fa-solid fa-magnifying-glass"></i></a>
+                <Link to="/" ><i className="fa-solid fa-magnifying-glass"></i></Link>
             </div>
             <div className="nav-bar-buttons">
                 <Link to="/login"><button className="login">Login</button></Link>
