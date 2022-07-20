@@ -1,7 +1,5 @@
-@import url(/global-styles.css);
 
-
-.main{
+.authenticate-main{
     background-color: var(--bg-modal);
     position: absolute;
     left: 50%;

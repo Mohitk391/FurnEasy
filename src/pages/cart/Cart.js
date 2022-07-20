@@ -1,17 +1,17 @@
 import { NavBar } from "../../components/NavBar/NavBar";
 import "./cart.css";
-import {sofa} from "../../Assets/images/sofa.jpeg";
+import sofa from "../../Assets/images/sofa.jpeg";
 
-export default function Cart(){
+function Cart(){
     return (
         <div className="page-layout">
             <NavBar />
-            <div className="main">
+            <div className="cart-main">
                 <h2 className="cart-title">My Cart</h2>
                 <div className="cart-body">
                     <div className="card">
                         <div className="image">
-                            <img src={sofa} alt="card" />
+                            <img src={sofa} alt="sofa" />
                         </div>
                         <div className="card-content">
                             <div className="card-title">Sofa</div>
@@ -65,3 +65,5 @@ export default function Cart(){
         </div>
     );
 }
+
+export { Cart}

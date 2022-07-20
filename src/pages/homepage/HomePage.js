@@ -1,4 +1,3 @@
-import { ProductListing } from "../productlisting/ProductListing";
 import bed from '../../Assets/images/bed.png';
 import table from "../../Assets/images/table.jpg";
 import chair from "../../Assets/images/chair.jpg";
@@ -7,6 +6,7 @@ import sofa from "../../Assets/images/sofa.jpeg";
 import furniture from "../../Assets/images/furniture.jpg";
 import "./styles.css";
 import { NavBar } from "../../components/NavBar/NavBar";
+import { Link } from "react-router-dom";
 
 function Homepage() {
 
@@ -38,7 +38,7 @@ function Homepage() {
             </div>
             <div className="main-large-info overlay">
                 <img className="furniture" src={furniture} alt="furniture" />
-                <div className="overlay-layer text-overlay"><a href={ ProductListing }><button className="btn products-link">See All Products</button></a></div>
+                <div className="overlay-layer text-overlay"><Link to="/products"><button className="btn products-link">See All Products</button></Link></div>
             </div>
         </main>
     </div>
