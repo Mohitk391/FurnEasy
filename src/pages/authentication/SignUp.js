@@ -14,7 +14,6 @@ export default function SignUp(){
     const signUser = async(e) => {
         e.preventDefault();
         if((user.firstName.trim()).length === 0 || (user.lastName.trim()).length===0 || (user.email.trim()).length ===0 || (user.password.trim()).length ===0 || (user.confirmPassword.trim()).length === 0 || user.confirmPassword !== user.password){
-            console.log(user.confirmPassword);
             if((user.confirmPassword.trim()).length === 0 || user.confirmPassword !== user.password)
                 setUser({...user, confirmPasswordError: true});
             if((user.password.trim()).length === 0)
