@@ -16,6 +16,19 @@
     width: 50vw;
 }
 
+.cart-body .card{
+    width: 19.5rem;
+}
+
+.cart-item-image{
+    height: 15rem;
+}
+
+.card-title{
+    white-space: nowrap;
+}
+
+
 .quantity{
     align-self: center;
     padding: 0.7rem 0.55rem;
@@ -43,10 +56,14 @@
 .line-break{
     margin: 1rem 0;
 }
-.product-image{
-    width:  20rem;
-    height: 15rem;
-    background-size: cover;
+.cart-body .product-image{
+    width: 19.5rem;
+    max-height: 100%;
+}
+
+.cart-body .remove-from-wishlist-button{
+    padding: 0 0.2rem ;
+    white-space: nowrap;
 }
 
 .qty-btn{
