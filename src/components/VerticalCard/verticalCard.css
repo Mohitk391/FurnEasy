@@ -35,3 +35,13 @@
     height: 15rem;
     background-size: cover;
 }
+
+.card-content{
+    all:revert;
+    display:grid;
+    padding: 1rem;
+}
+
+.remove-from-wishlist-button{
+    font-size: 0.9rem;
+}

@@ -112,7 +112,7 @@ function Cart(){
                 <div className="cart-main">
                     <div className="cart-body">
                         {cartList.map((product)=>(<div className="card vertical-card" id={items} key={product._id}>
-                            <div className="flex">
+                            <div className="flex cart-item-image">
                                 <img className="responsive-image product-image" src={product.imageUrl} alt="sofa" />
                             </div>
                             <div className="card-content">
@@ -122,7 +122,7 @@ function Cart(){
                                 </div>
                                 <div className="card-price-text flex"><p style={{textDecoration: "line-through"}}>Rs. {product.originalPrice}</p>Rs. {product.discountPrice}</div>
                                 <div className="card-footer flex">
-                                    <div className="card-footer-buttons flex flex-gap-1">
+                                    <div className="card-footer-buttons flex">
                                     { !isItemInBucket(wishlistState.wishlist, product) ? 
                                         <button className="btn btn-hover wishlist-button" onClick={()=>{ updateWishlist(product, "ADD")}}>
                                             Add to Wishlist
